@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MoveToPlayer : MonoBehaviour {
     GameObject player;
-    public float speed = 0.2f;//移動速度
+    public float speed = 0.01f;//移動速度
     private float firstSpeed;//紀錄第一次移動的距離
 
 	// Use this for initialization
@@ -23,12 +23,16 @@ public class MoveToPlayer : MonoBehaviour {
             this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, speed);
             speed = calculateNewSpeed();
         }*/
+
+        //先移動過後，再計算新的 speed
+        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, speed/5.0f);
+        speed = calculateNewSpeed();
 	}
 
     void FixedUpdate(){
         //先移動過後，再計算新的 speed
-        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, speed);
-        speed = calculateNewSpeed();
+        //this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, speed);
+        //speed = calculateNewSpeed();
 
     }
 
