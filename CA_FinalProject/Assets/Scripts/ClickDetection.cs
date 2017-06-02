@@ -2,8 +2,11 @@
 using System.Collections;
 
 public class ClickDetection : MonoBehaviour {
+
+    public Camera curr_camera;
+
     GameObject objIsHit;
-    private bool IsHit = false;
+    //private bool IsHit = false;
     private Vector3 screenPoint;
     private Vector3 offset;
 
@@ -44,8 +47,9 @@ public class ClickDetection : MonoBehaviour {
 
             if (objIsHit.tag == "Enemy") //點擊到敵人就消滅
                 Destroy(objIsHit);
-        }*/
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        }*/ 
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = curr_camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
         {

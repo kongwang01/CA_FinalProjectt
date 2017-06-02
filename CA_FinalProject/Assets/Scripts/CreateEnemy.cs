@@ -39,7 +39,8 @@ public class CreateEnemy : MonoBehaviour {
         //newEnemy.transform.rotation = Quaternion.Euler(newEnemy.transform.position - player.transform.position);
 
         //讓怪物面向玩家
-        Vector3 relativePos = newEnemy.transform.position - player.transform.position;
+        //Vector3 relativePos = newEnemy.transform.position - player.transform.position;
+        Vector3 relativePos = player.transform.position - newEnemy.transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         newEnemy.transform.rotation = rotation;
 
