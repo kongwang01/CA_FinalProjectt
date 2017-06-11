@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: f97d6c4cd95d7cb439bd10a7ff9ab19a
+timeCreated: 1497184565
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: belt
+    100002: body1
+    100004: Character1_Hips
+    100006: Character1_Reference
+    100008: Character1_RightArm
+    100010: Character1_RightForeArm
+    100012: Character1_RightHand
+    100014: Character1_RightShoulder
+    100016: Character1_Spine
+    100018: Character1_Spine1
+    100020: Excalibur1
+    100022: Excalibur:blade
+    100024: Excalibur:blue_grid
+    100026: Excalibur:blue_hilt
+    100028: Excalibur:blue_pattern
+    100030: Excalibur:gold_grid
+    100032: Excalibur:gold_hilt
+    100034: Excalibur:gold_pattern
+    100036: group5
+    100038: group6
+    100040: hair
+    100042: Leye
+    100044: Leyeblow
+    100046: pCube4
+    100048: pCube5
+    100050: pCube6
+    100052: Reye
+    100054: Reyeblow
+    100056: shawl
+    100058: shawl2
+    100060: //RootNode
+    400000: belt
+    400002: body1
+    400004: Character1_Hips
+    400006: Character1_Reference
+    400008: Character1_RightArm
+    400010: Character1_RightForeArm
+    400012: Character1_RightHand
+    400014: Character1_RightShoulder
+    400016: Character1_Spine
+    400018: Character1_Spine1
+    400020: Excalibur1
+    400022: Excalibur:blade
+    400024: Excalibur:blue_grid
+    400026: Excalibur:blue_hilt
+    400028: Excalibur:blue_pattern
+    400030: Excalibur:gold_grid
+    400032: Excalibur:gold_hilt
+    400034: Excalibur:gold_pattern
+    400036: group5
+    400038: group6
+    400040: hair
+    400042: Leye
+    400044: Leyeblow
+    400046: pCube4
+    400048: pCube5
+    400050: pCube6
+    400052: Reye
+    400054: Reyeblow
+    400056: shawl
+    400058: shawl2
+    400060: //RootNode
+    2300000: Excalibur:blade
+    2300002: Excalibur:blue_grid
+    2300004: Excalibur:blue_hilt
+    2300006: Excalibur:blue_pattern
+    2300008: Excalibur:gold_grid
+    2300010: Excalibur:gold_hilt
+    2300012: Excalibur:gold_pattern
+    2300014: pCube5
+    2300016: pCube6
+    3300000: Excalibur:blade
+    3300002: Excalibur:blue_grid
+    3300004: Excalibur:blue_hilt
+    3300006: Excalibur:blue_pattern
+    3300008: Excalibur:gold_grid
+    3300010: Excalibur:gold_hilt
+    3300012: Excalibur:gold_pattern
+    3300014: pCube5
+    3300016: pCube6
+    4300000: body1
+    4300002: shawl
+    4300004: shawl2
+    4300006: belt
+    4300008: pCube4
+    4300010: Leyeblow
+    4300012: Leye
+    4300014: Reyeblow
+    4300016: Reye
+    4300018: pCube5
+    4300020: pCube6
+    4300022: hair
+    4300024: Excalibur:blue_hilt
+    4300026: Excalibur:gold_hilt
+    4300028: Excalibur:blue_grid
+    4300030: Excalibur:gold_grid
+    4300032: Excalibur:gold_pattern
+    4300034: Excalibur:blue_pattern
+    4300036: Excalibur:blade
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: belt
+    13700002: body1
+    13700004: hair
+    13700006: Leye
+    13700008: Leyeblow
+    13700010: pCube4
+    13700012: Reye
+    13700014: Reyeblow
+    13700016: shawl
+    13700018: shawl2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character1_Reference
+        weight: 1
+      - path: Character1_Reference/Character1_Hips
+        weight: 1
+      - path: Character1_Reference/Character1_Hips/Character1_Spine
+        weight: 1
+      - path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1
+        weight: 1
+      - path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_RightShoulder
+        weight: 1
+      - path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_RightShoulder/Character1_RightArm
+        weight: 1
+      - path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_RightShoulder/Character1_RightArm/Character1_RightForeArm
+        weight: 1
+      - path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_RightShoulder/Character1_RightArm/Character1_RightForeArm/Character1_RightHand
+        weight: 1
+      - path: Excalibur1
+        weight: 1
+      - path: Excalibur1/Excalibur:blade
+        weight: 1
+      - path: Excalibur1/Excalibur:blue_grid
+        weight: 1
+      - path: Excalibur1/Excalibur:blue_hilt
+        weight: 1
+      - path: Excalibur1/Excalibur:blue_pattern
+        weight: 1
+      - path: Excalibur1/Excalibur:gold_grid
+        weight: 1
+      - path: Excalibur1/Excalibur:gold_hilt
+        weight: 1
+      - path: Excalibur1/Excalibur:gold_pattern
+        weight: 1
+      - path: group6
+        weight: 1
+      - path: group6/group5
+        weight: 1
+      - path: group6/group5/belt
+        weight: 1
+      - path: group6/group5/body1
+        weight: 1
+      - path: group6/group5/Leye
+        weight: 1
+      - path: group6/group5/Leyeblow
+        weight: 1
+      - path: group6/group5/pCube4
+        weight: 1
+      - path: group6/group5/pCube5
+        weight: 1
+      - path: group6/group5/pCube6
+        weight: 1
+      - path: group6/group5/Reye
+        weight: 1
+      - path: group6/group5/Reyeblow
+        weight: 1
+      - path: group6/group5/shawl
+        weight: 1
+      - path: group6/group5/shawl2
+        weight: 1
+      - path: group6/hair
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

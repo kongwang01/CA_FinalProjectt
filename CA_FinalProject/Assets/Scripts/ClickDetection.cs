@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ClickDetection : MonoBehaviour {
-
+    public GameObject slash;
     public Camera curr_camera;
 
     GameObject objIsHit;
@@ -60,8 +60,26 @@ public class ClickDetection : MonoBehaviour {
 
             if (objIsHit.tag == "Enemy") //點擊到敵人就消滅
             {
-                PlayerInformation.kill_number++;
-                Destroy(objIsHit);
+
+                PlayerInformation.clickOrNot = true;
+
+                //PlayerInformation.kill_number++;
+                //Destroy(objIsHit);
+
+                //讓玩家播放攻擊動畫
+
+                GameObject newSlash = Instantiate(slash);
+                //newSlash.transform.Translate(rand_x, 0, rand_z);
+
+                //讓劍氣朝向怪物
+                //Vector3 relativePos = newEnemy.transform.position - player.transform.position;
+                Vector3 relativePos = objIsHit.transform.position - newSlash.transform.position;
+                Quaternion rotation = Quaternion.LookRotation(relativePos);
+                newSlash.transform.rotation = rotation;
+
+                newSlash.AddComponent<SlashToEnemy>();
+                newSlash.GetComponent<SlashToEnemy>().enemy = objIsHit;
+                newSlash.tag = "Slash";
             }
         }
         

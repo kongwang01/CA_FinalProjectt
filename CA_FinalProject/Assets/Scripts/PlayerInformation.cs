@@ -7,20 +7,34 @@ public class PlayerInformation : MonoBehaviour {
     private GUIStyle guiStyle = new GUIStyle(); //create a new variable
     public bool IsDebug = false;
 
+    Animator playerAnimator;
+    static public bool clickOrNot = false;
+
 	// Use this for initialization
 	void Start () {
-	
+        playerAnimator = gameObject.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	    
+        if (clickOrNot)
+        {
+            Debug.Log("click!");
+            playerAnimator.SetBool("click", clickOrNot);
+            clickOrNot = false;
+        }
+        //else
+        //    playerAnimator.SetBool("click", false);
 	}
 
     void OnTriggerEnter(Collider other)
     {
-        Material newMat = Resources.Load("Red", typeof(Material)) as Material;
-        this.GetComponent<Renderer>().material = newMat;
+        if (other.tag == "Enemy")
+        {
+            //Material newMat = Resources.Load("Red", typeof(Material)) as Material;
+            //this.GetComponent<Renderer>().material = newMat;
+            Debug.Log("Game Over!");
+        }
     }
 
     void OnGUI()

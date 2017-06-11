@@ -8,8 +8,8 @@ public class MoveToPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("Player");
-
+        //player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         firstSpeed = Vector3.Distance(this.transform.position, player.transform.position) * speed;
 	}
 	
@@ -46,5 +46,17 @@ public class MoveToPlayer : MonoBehaviour {
             return tmp;
         else
             return (firstSpeed / tmp);
+    }
+
+    //劍氣撞到怪物時，怪物消滅，並發出音效
+    void OnTriggerEnter(Collider other) 
+    {
+        if (other.tag == "Slash")
+        {
+            PlayerInformation.kill_number++;
+            Debug.Log("hit");
+            Destroy(this.gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }
