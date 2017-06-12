@@ -6,6 +6,8 @@ public class MoveToPlayer : MonoBehaviour {
     public float speed = 0.01f;//移動速度
     private float firstSpeed;//紀錄第一次移動的距離
 
+    int count = 0;
+
 	// Use this for initialization
 	void Start () {
         //player = GameObject.Find("Player");
@@ -23,6 +25,11 @@ public class MoveToPlayer : MonoBehaviour {
             this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, speed);
             speed = calculateNewSpeed();
         }*/
+
+        if (speed == 0f)
+            count++;
+        if(count > 30)
+            Destroy(this.gameObject);
 
         //先移動過後，再計算新的 speed
         this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, speed/5.0f);
@@ -44,6 +51,8 @@ public class MoveToPlayer : MonoBehaviour {
         //當距離為0的時候，就代表已經移動到目的地了。
         if (tmp == 0)
             return tmp;
+        else if (speed == 0f)
+            return 0f;
         else
             return (firstSpeed / tmp);
     }
@@ -55,7 +64,14 @@ public class MoveToPlayer : MonoBehaviour {
         {
             PlayerInformation.kill_number++;
             Debug.Log("hit");
-            Destroy(this.gameObject);
+
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+
+            this.transform.localScale = new Vector3(1f, 0.2f, 1f);
+            speed = 0f;
+
+            //Destroy(this.gameObject);
             Destroy(other.gameObject);
         }
     }

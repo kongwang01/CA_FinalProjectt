@@ -23,10 +23,12 @@ public class ClickDetection : MonoBehaviour {
     Quaternion initialRotation;
     float angleFromStart;
 
+    GameObject player;
+
     // Use this for initialization
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
@@ -69,12 +71,22 @@ public class ClickDetection : MonoBehaviour {
                 //讓玩家播放攻擊動畫
 
                 GameObject newSlash = Instantiate(slash);
-                //newSlash.transform.Translate(rand_x, 0, rand_z);
+                newSlash.transform.Translate(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+
+                //揮劍音效
+                AudioSource player_audio = player.GetComponent<AudioSource>();
+                player_audio.Play();
+
+                //讓玩家朝向怪物
+                Vector3 relativePos = objIsHit.transform.position - player.transform.position;
+                Quaternion rotation = Quaternion.LookRotation(relativePos);
+                player.transform.rotation = rotation;
+
 
                 //讓劍氣朝向怪物
                 //Vector3 relativePos = newEnemy.transform.position - player.transform.position;
-                Vector3 relativePos = objIsHit.transform.position - newSlash.transform.position;
-                Quaternion rotation = Quaternion.LookRotation(relativePos);
+                relativePos = objIsHit.transform.position - newSlash.transform.position;
+                rotation = Quaternion.LookRotation(relativePos);
                 newSlash.transform.rotation = rotation;
 
                 newSlash.AddComponent<SlashToEnemy>();

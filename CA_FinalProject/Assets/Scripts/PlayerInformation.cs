@@ -25,6 +25,28 @@ public class PlayerInformation : MonoBehaviour {
         }
         //else
         //    playerAnimator.SetBool("click", false);
+
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            this.transform.Translate(1f, 0f, 0f, Space.World);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            this.transform.Translate(-1f, 0f, 0f, Space.World);
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            this.transform.Translate(0f, 0f, -1f, Space.World);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            this.transform.Translate(0f, 0f, 1f, Space.World);
+        }
+
 	}
 
     void OnTriggerEnter(Collider other)
@@ -34,6 +56,7 @@ public class PlayerInformation : MonoBehaviour {
             //Material newMat = Resources.Load("Red", typeof(Material)) as Material;
             //this.GetComponent<Renderer>().material = newMat;
             Debug.Log("Game Over!");
+            Application.LoadLevel(1);
         }
     }
 

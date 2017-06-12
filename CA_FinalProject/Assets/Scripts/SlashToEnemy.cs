@@ -4,14 +4,14 @@ using System.Collections;
 public class SlashToEnemy : MonoBehaviour {
     public GameObject enemy;
     public float speed = 0.1f;//移動速度
-    private float firstSpeed;//紀錄第一次移動的距離
+//    private float firstSpeed;//紀錄第一次移動的距離
 
     // Use this for initialization
     void Start()
     {
         //player = GameObject.Find("Player");
 
-        firstSpeed = Vector3.Distance(this.transform.position, enemy.transform.position) * speed;
+//        firstSpeed = Vector3.Distance(this.transform.position, enemy.transform.position) * speed;
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class SlashToEnemy : MonoBehaviour {
         }*/
 
         //先移動過後，再計算新的 speed
-        if (this.gameObject != null)
+        if ((this.gameObject != null) && (enemy.gameObject != null))
         {
             this.transform.position = Vector3.Lerp(this.transform.position, enemy.transform.position, speed / 0.5f);
 //            speed = calculateNewSpeed();

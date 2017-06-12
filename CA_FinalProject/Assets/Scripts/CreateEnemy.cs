@@ -5,6 +5,8 @@ public class CreateEnemy : MonoBehaviour {
     public GameObject player;
     public GameObject Enemy;
 
+    public AudioClip EnemyDie;
+
 	// Use this for initialization
 	void Start () {
         //Enemy.gameObject.transform.localScale -= new Vector3(501, 501, 501);
@@ -23,8 +25,8 @@ public class CreateEnemy : MonoBehaviour {
 	}
 
     void FixedUpdate(){
-        int rand_x = Random.Range(10, 50); //怪物的初始位置隨機
-        int rand_z = Random.Range(10, 50);
+        int rand_x = Random.Range(20, 50); //怪物的初始位置隨機
+        int rand_z = Random.Range(20, 50);
 
         if ((rand_x % 2) == 0)
             rand_x = -rand_x;
@@ -46,5 +48,8 @@ public class CreateEnemy : MonoBehaviour {
 
         newEnemy.AddComponent<MoveToPlayer>();
         newEnemy.tag = "Enemy";
+
+        AudioSource audioSource = newEnemy.AddComponent<AudioSource>();
+        audioSource.clip = EnemyDie;
     }
 }
