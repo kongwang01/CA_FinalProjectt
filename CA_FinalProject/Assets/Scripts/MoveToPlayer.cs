@@ -31,8 +31,10 @@ public class MoveToPlayer : MonoBehaviour {
         if(count > 30)
             Destroy(this.gameObject);
 
+        int rand_speed = Random.Range(8, 15); //隨機速度
+
         //先移動過後，再計算新的 speed
-        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, speed/5.0f);
+        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, speed /(float)rand_speed);
         speed = calculateNewSpeed();
 	}
 
@@ -60,7 +62,7 @@ public class MoveToPlayer : MonoBehaviour {
     //劍氣撞到怪物時，怪物消滅，並發出音效
     void OnTriggerEnter(Collider other) 
     {
-        if (other.tag == "Slash")
+        if (other.tag == "Slash" && (speed!=0f))
         {
             PlayerInformation.kill_number++;
             Debug.Log("hit");

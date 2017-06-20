@@ -71,7 +71,8 @@ public class ClickDetection : MonoBehaviour {
                 //讓玩家播放攻擊動畫
 
                 GameObject newSlash = Instantiate(slash);
-                newSlash.transform.Translate(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+                //newSlash.transform.Translate(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+                newSlash.transform.position.Set(player.transform.position.x, player.transform.position.y, player.transform.position.z);
 
                 //揮劍音效
                 AudioSource player_audio = player.GetComponent<AudioSource>();

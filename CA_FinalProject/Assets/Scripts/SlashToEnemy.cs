@@ -26,12 +26,17 @@ public class SlashToEnemy : MonoBehaviour {
             speed = calculateNewSpeed();
         }*/
 
+        //if (speed <= 0.2f)
+        //    Destroy(this.gameObject);
+
         //先移動過後，再計算新的 speed
         if ((this.gameObject != null) && (enemy.gameObject != null))
         {
             this.transform.position = Vector3.Lerp(this.transform.position, enemy.transform.position, speed / 0.5f);
 //            speed = calculateNewSpeed();
         }
+        else
+            Destroy(this.gameObject);
     }
 
     void FixedUpdate()

@@ -25,11 +25,11 @@ public class CreateEnemy : MonoBehaviour {
 	}
 
     void FixedUpdate(){
-        int rand_x = Random.Range(20, 50); //怪物的初始位置隨機
-        int rand_z = Random.Range(20, 50);
+        int rand_x = Random.Range(200, 250); //怪物的初始位置隨機
+        int rand_z = Random.Range(0, 250);
 
-        if ((rand_x % 2) == 0)
-            rand_x = -rand_x;
+        //if ((rand_x % 2) == 0)
+        //    rand_x = -rand_x;
 
         if ((rand_z % 2) == 0)
             rand_z = -rand_z;
