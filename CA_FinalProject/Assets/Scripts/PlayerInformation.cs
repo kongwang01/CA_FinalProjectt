@@ -24,7 +24,7 @@ public class PlayerInformation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (kill_number >= 100) //進入good end
+        if (kill_number >= 50) //進入good end
             Application.LoadLevel(3);
 
         if (IsDebug && (kill_number >= 10))//Debug模式時，殺10隻就進入good end
@@ -42,7 +42,7 @@ public class PlayerInformation : MonoBehaviour {
 
         if (dieCount >= 300)//進入bad end
         {
-            Application.LoadLevel(1);
+            Application.LoadLevel(2);
         }
 
         if (clickOrNot)

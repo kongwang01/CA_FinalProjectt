@@ -87,7 +87,7 @@ public class PlayMovie : MonoBehaviour
             //    movTexture.Play();
            // }
             //movTexture.Stop();
-            Application.LoadLevel(0);
+            Application.LoadLevel(1);
         }
        /* if (GUILayout.Button("Pause"))
         {

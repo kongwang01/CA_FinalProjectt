@@ -19,7 +19,7 @@ public class PlayOpening : MonoBehaviour
     void Update()
     {
         if (!movTexture.isPlaying) //當影片結束，就開始遊戲
-            Application.LoadLevel(0);
+            Application.LoadLevel(1);
     }
 
     void OnGUI()
